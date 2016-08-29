@@ -20,8 +20,17 @@
     <script src="js/miniui/miniui.js"></script>
     <script src="js/miniui/locale/zh_CN.js"></script>
 </head>
-<body style="background-color: #ecf0f5">
+<body class="hold-transition skin-blue layout-boxed sidebar-mini">
+
     <div class="wrapper">
+           <header class="main-header">
+                   <a href="../../index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">南方电网</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">中国南方电网</span>
+    </a>
+       </header>
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">
@@ -62,8 +71,8 @@
                                     </div>
                                     <div header="基本信息" headeralign="center">
                                         <div property="columns">
-                                            <div field="csny" width="100" renderer="onBirthdayRenderer" headeralign="center" align="center">出生日期</div>
-                                            <div field="sfz" width="100" align="center" renderer="onMarriedRenderer" headeralign="center" align="center">身份证号</div>
+                                            <div field="csny" width="100"  headeralign="center" align="center">出生日期</div>
+                                            <div field="sfz" width="100"  headeralign="center" align="center">身份证号</div>
                                             <div field="jtzz" width="100" headeralign="center">家庭住址</div>
                                             <div field="lxdd" width="100" headeralign="center" align="center">联系电话</div>
                                         </div>
@@ -73,23 +82,88 @@
                         </div>
                     </div>
                 </div>
-    </div>
+            </div>
+        </section>
+                <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box box-primary">
+                        <div class="box-header">
+                            <h3 class="box-title">外围流动员工</h3>
+                            <div class="box-tools">
+                                <div class="row">
+                                    <div class="col-xs-7">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                                            <div class="input-group-btn">
+                                                <button type="submit" class="btn btn-default btn-danger"><i class="fa fa-search" style="color: #fff;"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <button type="button" class="btn btn-block  btn-primary">新增人员</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div id="datagrid2" class="mini-datagrid" style="width: 100%; height: auto;" url="" idfield="id" multiselect="true">
+                                <div property="columns">
+                                    <!--<div type="indexcolumn"></div>        -->
+                                    <div type="checkcolumn"></div>
+                                    <div field="xm" width="80" headeralign="center" align="center">姓名</div>
+                                    <div field="sfz" width="100"  headeralign="center" align="center">身份证号</div>
+                                    <div header="工作信息" headeralign="center">
+                                        <div property="columns">
+                                            <div field="gsmc" width="100" headeralign="center" align="center">公司名称</div>
+                                            <div field="jn" width="100" align="center"  headeralign="center" align="center">技能</div>
+                                        </div>
+                                    </div>
+                                    <div header="基本信息" headeralign="center">
+                                        <div property="columns">
+                                            <div field="htsj" width="100" headeralign="center" align="center">从业资格证有效起讫时间</div>
+                                            <div field="lxdd" width="100" headeralign="center" align="center">联系电话</div>
+                                            <div field="hj" width="100" headeralign="center" align="center">户籍</div>
+                                            <div field="csny" width="100" headeralign="center" align="center">出生年月</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </body>
 </html>
 <script>
     $(function () {
-        var grid = mini.get("datagrid1");
-        var data = [{ "id": "1", "xm": "张三", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
-        { "id": "1", "xm": "张三", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
-        { "id": "1", "xm": "张三", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
-        { "id": "1", "xm": "张三", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
-        { "id": "1", "xm": "张三", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
-        { "id": "1", "xm": "张三", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
-        { "id": "1", "xm": "张三", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
-        { "id": "1", "xm": "张三", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
-        { "id": "1", "xm": "张三", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" }];
-        grid.setData(data);
+        var grid1 = mini.get("datagrid1");
+        var data1 = [{ "id": "1", "xm": "张三1", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
+        { "id": "1", "xm": "张三2", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
+        { "id": "1", "xm": "张三3", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
+        { "id": "1", "xm": "张三4", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
+        { "id": "1", "xm": "张三5", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
+        { "id": "1", "xm": "张三6", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
+        { "id": "1", "xm": "张三7", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
+        { "id": "1", "xm": "张三8", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" },
+        { "id": "1", "xm": "张三9", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777" }];
+        grid1.setData(data1);
+        var grid2 = mini.get("datagrid2");
+        var data2 = [{ "id": "1", "xm": "张三", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777","gsmc":"人才派遣公司" ,"jn":"jn-A"},
+        { "id": "1", "xm": "李四1", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777", "gsmc": "人才派遣公司", "jn": "jn-B" },
+        { "id": "1", "xm": "李四2", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777", "gsmc": "人才派遣公司", "jn": "jn-V" },
+        { "id": "1", "xm": "李四3", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777", "gsmc": "人才派遣公司", "jn": "jn-C" },
+        { "id": "1", "xm": "李四4", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777", "gsmc": "人才派遣公司", "jn": "jn-D" },
+        { "id": "1", "xm": "李四5", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777", "gsmc": "人才派遣公司", "jn": "jn-A" },
+        { "id": "1", "xm": "李四6", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777", "gsmc": "人才派遣公司", "jn": "jn-B" },
+        { "id": "1", "xm": "李四7", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777", "gsmc": "人才派遣公司", "jn": "jn-B" },
+        { "id": "1", "xm": "李四8", "gh": "A-00000001", "gwss": "岗位1", "htsj": "2019-01-01", "csny": "1984-01-01", "sfz": "320282198744445557", "jtzz": "无锡市滨湖区西昌路103号", "lxdd": "13777777777", "gsmc": "人才派遣公司", "jn": "jn-B" }];
+        grid2.setData(data2);
     });
 </script>
